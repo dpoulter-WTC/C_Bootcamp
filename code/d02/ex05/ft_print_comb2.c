@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_comb.c                                    :+:      :+:    :+:   */
+/*   ft_print_comb2.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dpoulter <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/02/14 17:43:27 by dpoulter          #+#    #+#             */
-/*   Updated: 2018/02/14 20:33:05 by dpoulter         ###   ########.fr       */
+/*   Created: 2018/02/14 20:43:06 by dpoulter          #+#    #+#             */
+/*   Updated: 2018/02/14 22:19:24 by dpoulter         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,28 +18,25 @@ void	ft_putchar(char c)
 	return ;
 }
 
-void	ft_print_comb(void)
+void	ft_print_comb2(void)
 {
 	int i;
 	int j;
-	int k;
 
-	i = 47;
-	while (i < 57)
+	i = -1;
+	while (i < 99)
 	{
-		j = ++i;
-		while (j < 57)
+		j = ++i + 1;
+		while (j < 100)
 		{
-			k = ++j + 1;
-			while (k < 58)
+			ft_putchar(i / 10 + '0');
+			ft_putchar(i % 10 + '0');
+			ft_putchar(32);
+			ft_putchar(j / 10 + '0');
+			ft_putchar(j++ % 10 + '0');
+			if (i != 98)
 			{
-				ft_putchar(i);
-				ft_putchar(j);
-				ft_putchar(k++);
-				if (i < 55)
-				{
-					write(1, ", ", 2);
-				}
+				write(1, ", ", 2);
 			}
 		}
 	}
@@ -49,6 +46,6 @@ void	ft_print_comb(void)
 
 int		main(void)
 {
-	ft_print_comb();
+	ft_print_comb2();
 	return (0);
 }
