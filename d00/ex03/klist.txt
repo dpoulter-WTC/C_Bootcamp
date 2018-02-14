@@ -1,5 +1,0 @@
-≈Credentials cache: API:5064
-        Principal: dpoulter@WETHINKCODE.CO.ZA
-
-  Issued                Expires               Principal
-Feb 12 14:42:46 2018  Feb 13 00:42:46 2018  krbtgt/WETHINKCODE.CO.ZA@WETHINKCODE.CO.ZA
