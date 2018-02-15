@@ -6,17 +6,11 @@
 /*   By: dpoulter <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/14 17:43:27 by dpoulter          #+#    #+#             */
-/*   Updated: 2018/02/14 20:33:05 by dpoulter         ###   ########.fr       */
+/*   Updated: 2018/02/15 14:02:59 by dpoulter         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_putchar(char c)
-{
-	write(1, &c, 1);
-	return ;
-}
+void	ft_putchar(char c);
 
 void	ft_print_comb(void)
 {
@@ -45,10 +39,4 @@ void	ft_print_comb(void)
 	}
 	ft_putchar('\n');
 	return ;
-}
-
-int		main(void)
-{
-	ft_print_comb();
-	return (0);
 }

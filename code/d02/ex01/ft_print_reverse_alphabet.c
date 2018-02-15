@@ -5,37 +5,23 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: dpoulter <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/02/14 14:46:50 by dpoulter          #+#    #+#             */
-/*   Updated: 2018/02/14 16:43:50 by dpoulter         ###   ########.fr       */
+/*   Created: 2018/02/15 13:53:39 by dpoulter          #+#    #+#             */
+/*   Updated: 2018/02/15 13:53:49 by dpoulter         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_print_reverse_alphabet(void);
-
-void	ft_putchar(char c)
-{
-	write(1, &c, 1);
-	return ;
-}
+void	ft_putchar(char c);
 
 void	ft_print_reverse_alphabet(void)
 {
 	char i;
 
 	i = 122;
-	while (i > 96)
+	while (i >= 97)
 	{
 		ft_putchar(i);
 		i--;
 	}
 	ft_putchar('\n');
 	return ;
-}
-
-int		main(void)
-{
-	ft_print_reverse_alphabet();
-	return (0);
 }

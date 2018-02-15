@@ -1,39 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*   ft_print_numbers.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dpoulter <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/02/14 12:31:58 by dpoulter          #+#    #+#             */
-/*   Updated: 2018/02/14 14:24:57 by dpoulter         ###   ########.fr       */
+/*   Created: 2018/02/15 13:28:59 by dpoulter          #+#    #+#             */
+/*   Updated: 2018/02/15 13:34:43 by dpoulter         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+void	ft_putchar(char c);
 
-void	ft_putchar(char c)
-{
-	write(1, &c, 1);
-	return ;
-}
-
-void	ft_print_alphabet(void)
+void	ft_print_numbers(void)
 {
 	char i;
 
-	i = 122;
-	while (i > 96)
+	i = 48;
+	while (i <= 57)
 	{
 		ft_putchar(i);
-		i--;
+		i++;
 	}
 	ft_putchar('\n');
 	return ;
-}
-
-int		main(void)
-{
-	ft_print_alphabet();
-	return (0);
 }
