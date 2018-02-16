@@ -6,18 +6,11 @@
 /*   By: dpoulter <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/15 17:27:53 by dpoulter          #+#    #+#             */
-/*   Updated: 2018/02/15 17:32:50 by dpoulter         ###   ########.fr       */
+/*   Updated: 2018/02/16 09:21:13 by dpoulter         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int		ft_ft(int *nbr)
 {
 	*nbr = 42;
-}
-
-int		main(void)
-{
-	int nbr;
-	ft_ft(&nbr);
-	return (0);
 }
