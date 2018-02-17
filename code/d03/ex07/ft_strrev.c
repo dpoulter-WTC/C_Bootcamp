@@ -1,26 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strrev.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dpoulter <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/02/16 09:52:56 by dpoulter          #+#    #+#             */
-/*   Updated: 2018/02/16 11:12:50 by dpoulter         ###   ########.fr       */
+/*   Created: 2018/02/16 13:05:03 by dpoulter          #+#    #+#             */
+/*   Updated: 2018/02/16 13:52:00 by dpoulter         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_putchar(char c);
-
-int		ft_strlen(char *str)
+char	*ft_strrev(char *str)
 {
-	int a;
+	char	a;
+	char	b;
+	int		c;
+	int		l;
 
-	a = 1;
+	l = 0;
 	while (*str != '\0')
 	{
-		a++;
+		l++;
 		str++;
 	}
-	return (a);
+	c = 0;
+	str = str - l;
+	while (c < l / 2)
+	{
+		str = str + l - c;
+		a = *str;
+		str = str - l + c;
+		b = *str;
+		*str = a;
+		str = str + l - c;
+		*str = b;
+		c++;
+	}
+	return (0);
 }
