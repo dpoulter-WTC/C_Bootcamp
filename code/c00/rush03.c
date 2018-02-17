@@ -6,7 +6,7 @@
 /*   By: dpoulter <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/17 12:36:30 by dpoulter          #+#    #+#             */
-/*   Updated: 2018/02/17 16:39:30 by dpoulter         ###   ########.fr       */
+/*   Updated: 2018/02/17 16:48:16 by dpoulter         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,21 +14,25 @@ void	ft_putchar(char c);
 
 char	ft_setchar(int i, int j, int y, int x)
 {
-	if ((i == 0 && j == 0) || (j == 0 && i == x - 1))
+	if (i == 0 && j == 0)
 	{
-		return ('o');
+		return ('A');
 	}
-	else if ((i == x - 1 && j == y - 1) || (i == 0 && j == y - 1))
+	else if (j == 0 && i == x - 1)
 	{
-		return ('o');
+		return ('A');
 	}
-	else if ((i == 0) || (i == x - 1))
+	else if (j == y - 1 && i == x - 1 && x != 1)
 	{
-		return ('-');
+		return ('C');
 	}
-	else if ((j == 0) || (j == y - 1))
+	else if (i == 0 && j == y - 1 && y != 1)
 	{
-		return ('|');
+		return ('C');
+	}
+	else if ((i == 0) || (j == 0) || (j == y - 1) || (i == x - 1))
+	{
+		return ('B');
 	}
 	else
 	{
