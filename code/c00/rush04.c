@@ -6,12 +6,11 @@
 /*   By: dpoulter <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/17 12:36:30 by dpoulter          #+#    #+#             */
-/*   Updated: 2018/02/17 14:51:37 by dpoulter         ###   ########.fr       */
+/*   Updated: 2018/02/17 15:21:25 by dpoulter         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <unistd.h>
+void	ft_putchar(char c);
 
 char	ft_setchar(int i, int j, int x, int y)
 {
@@ -43,7 +42,6 @@ char	ft_setchar(int i, int j, int x, int y)
 
 void	rush(int x, int y)
 {
-	char	grid[x][y];
 	int		i;
 	int		j;
 
@@ -53,17 +51,10 @@ void	rush(int x, int y)
 		j = 0;
 		while (j < y)
 		{
-			grid[i][j] = ft_setchar(i, j, x, y);
-			printf("%c", grid[i][j]);
+			ft_putchar(ft_setchar(i, j, x, y));
 			j++;
 		}
-		printf("%c", '\n');
+		ft_putchar('\n');
 		i++;
 	}
-}
-
-int		main(void)
-{
-	rush(1, 1);
-	return (0);
 }

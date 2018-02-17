@@ -6,12 +6,9 @@
 /*   By: dpoulter <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/17 09:11:01 by dpoulter          #+#    #+#             */
-/*   Updated: 2018/02/17 10:43:08 by dpoulter         ###   ########.fr       */
+/*   Updated: 2018/02/17 15:21:08 by dpoulter         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "rush00.c"
-#include "ft_putchar.c"
 
 void	rush(int x, int y);
 
