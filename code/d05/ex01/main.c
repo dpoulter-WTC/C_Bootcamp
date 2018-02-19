@@ -6,7 +6,7 @@
 /*   By: dpoulter <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/19 10:16:46 by dpoulter          #+#    #+#             */
-/*   Updated: 2018/02/19 16:08:35 by dpoulter         ###   ########.fr       */
+/*   Updated: 2018/02/19 18:21:58 by dpoulter         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,6 @@ int		main(void)
 	char str2[200];
 
 	char str1[] = "testing this function!!!!!!!!!!!!!!!!!!";
-	printf("%s", (ft_strncpy(str2, str1, 5)));	
+	printf("%s", (ft_strncpy(str2, str1, 100)));	
 	return (0);
 }

@@ -6,18 +6,13 @@
 /*   By: dpoulter <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/18 17:31:59 by dpoulter          #+#    #+#             */
-/*   Updated: 2018/02/19 09:15:12 by dpoulter         ###   ########.fr       */
+/*   Updated: 2018/02/19 18:38:53 by dpoulter         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
 void	ft_putchar(char c);
-
-void	ft_putchar(char c)
-{
-	write(1, &c, 1);
-}
 
 int		ft_get_width(int size)
 {
@@ -119,14 +114,4 @@ void	sastantua(int size)
 		level_size += (level[0] % 2 - (level[0] + 2) * 2);
 		level[0]++;
 	}
-}
-
-int		main(void)
-{
-	int i;
-
-	i = 1;
-	while(i++ < 9)
-		sastantua(i);
-	return (0);
 }
