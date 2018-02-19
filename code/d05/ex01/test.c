@@ -6,7 +6,7 @@
 /*   By: dpoulter <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/19 09:03:05 by dpoulter          #+#    #+#             */
-/*   Updated: 2018/02/19 15:20:10 by dpoulter         ###   ########.fr       */
+/*   Updated: 2018/02/19 16:10:51 by dpoulter         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,10 +33,10 @@ void	ft_putstr(char *str)
 int main(int argc, const char * argv[])
 {
     /* Create an example variable capable of holding 50 characters */
-    char example[5];
+    char example[10];
 
     /* Copy the string "TechOnTheNet.com knows strcpy!" into the example variable */
-    strcpy (example, "TechOnTheNet.com knows strcpy!");
+    strncpy (example, "TechOnTheNet.com knows strcpy!", 10);
 
     /* Display the contents of the example variable to the screen */
     ft_putstr( example);

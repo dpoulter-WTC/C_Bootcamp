@@ -1,20 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test.c                                             :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dpoulter <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/02/19 09:03:05 by dpoulter          #+#    #+#             */
-/*   Updated: 2018/02/19 15:20:10 by dpoulter         ###   ########.fr       */
+/*   Created: 2018/02/19 10:16:46 by dpoulter          #+#    #+#             */
+/*   Updated: 2018/02/19 17:42:15 by dpoulter         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* Example using strcpy by TechOnTheNet.com */
-
-#include <stdio.h>
-#include <string.h>
 #include <unistd.h>
+#include <stdio.h>
+
+char	*ft_strstr(char *str, char *to_find);
 
 void	ft_putchar(char c)
 {
@@ -30,16 +29,14 @@ void	ft_putstr(char *str)
 		ft_putchar(str[i++]);
 }
 
-int main(int argc, const char * argv[])
+int		main(void)
 {
-    /* Create an example variable capable of holding 50 characters */
-    char example[5];
+	const char haystack[20] = "TutorialsPoint";
+	const char needle[10] = "Point";
+	char *ret;
 
-    /* Copy the string "TechOnTheNet.com knows strcpy!" into the example variable */
-    strcpy (example, "TechOnTheNet.com knows strcpy!");
-
-    /* Display the contents of the example variable to the screen */
-    ft_putstr( example);
-
-    return 0;
+	ret = ft_strstr(haystack, needle);
+	printf("The substring is: %s\n", ret);
+	return(0);
+}
 }

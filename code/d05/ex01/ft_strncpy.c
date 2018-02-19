@@ -1,22 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strncpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dpoulter <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/02/19 08:36:02 by dpoulter          #+#    #+#             */
-/*   Updated: 2018/02/19 16:49:05 by dpoulter         ###   ########.fr       */
+/*   Created: 2018/02/19 16:06:34 by dpoulter          #+#    #+#             */
+/*   Updated: 2018/02/19 16:46:54 by dpoulter         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strcpy(char *dest, char *src)
+char	*ft_strncpy(char *dest, char *src, unsigned int n)
 {
-	char *output;
+	char			*output;
+	unsigned int	i;
 
+	i = 0;
 	output = dest;
-	while ((*dest++ = *src++) != '\0')
-		;
-	*dest = *src;
-	return (output);
+	while (*src != '\0')
+	{
+		if (i < n)
+			*dest = *src;
+		else
+			*dest = '\0';
+		src++;
+		dest++;
+		i++;
+	}
+	return (&dest);
 }

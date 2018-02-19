@@ -1,20 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test.c                                             :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dpoulter <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/02/19 09:03:05 by dpoulter          #+#    #+#             */
-/*   Updated: 2018/02/19 15:20:10 by dpoulter         ###   ########.fr       */
+/*   Created: 2018/02/19 10:16:46 by dpoulter          #+#    #+#             */
+/*   Updated: 2018/02/19 16:08:35 by dpoulter         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* Example using strcpy by TechOnTheNet.com */
-
-#include <stdio.h>
-#include <string.h>
 #include <unistd.h>
+#include <stdio.h>
+
+char	*ft_strncpy(char *dest, char *src, unsigned int n);
 
 void	ft_putchar(char c)
 {
@@ -30,16 +29,11 @@ void	ft_putstr(char *str)
 		ft_putchar(str[i++]);
 }
 
-int main(int argc, const char * argv[])
+int		main(void)
 {
-    /* Create an example variable capable of holding 50 characters */
-    char example[5];
+	char str2[200];
 
-    /* Copy the string "TechOnTheNet.com knows strcpy!" into the example variable */
-    strcpy (example, "TechOnTheNet.com knows strcpy!");
-
-    /* Display the contents of the example variable to the screen */
-    ft_putstr( example);
-
-    return 0;
+	char str1[] = "testing this function!!!!!!!!!!!!!!!!!!";
+	printf("%s", (ft_strncpy(str2, str1, 5)));	
+	return (0);
 }
