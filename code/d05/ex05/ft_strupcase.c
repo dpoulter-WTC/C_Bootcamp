@@ -1,37 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_strupcase.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dpoulter <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/02/19 16:06:34 by dpoulter          #+#    #+#             */
-/*   Updated: 2018/02/20 11:13:10 by dpoulter         ###   ########.fr       */
+/*   Created: 2018/02/20 11:18:49 by dpoulter          #+#    #+#             */
+/*   Updated: 2018/02/20 11:18:51 by dpoulter         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-
-char	*ft_strncpy(char *dest, char *src, unsigned int n)
+char	*ft_strupcase(char *str)
 {
-	char			*output;
-	unsigned int	i;
+	int	i;
 
 	i = 0;
-	output = dest;
-	while (*src != '\0' && i < n)
+	while (str[i])
 	{
-		*dest = *src;
+		if ((str[i] >= 'a') && (str[i] <= 'z'))
+			str[i] = str[i] - 32;
 		i++;
-		dest++;
-		src++;
 	}
-	while (i < n)
-	{
-		*dest = '\0';
-		i++;
-		dest++;
-	}
-	*dest = '\0';
-	return (output);
+	return (str);
 }

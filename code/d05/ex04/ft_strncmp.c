@@ -1,37 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dpoulter <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/02/19 16:06:34 by dpoulter          #+#    #+#             */
-/*   Updated: 2018/02/20 11:13:10 by dpoulter         ###   ########.fr       */
+/*   Created: 2018/02/20 11:18:12 by dpoulter          #+#    #+#             */
+/*   Updated: 2018/02/20 11:18:15 by dpoulter         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-
-char	*ft_strncpy(char *dest, char *src, unsigned int n)
+int		ft_strncmp(char *s1, char *s2, unsigned int n)
 {
-	char			*output;
 	unsigned int	i;
 
 	i = 0;
-	output = dest;
-	while (*src != '\0' && i < n)
+	while ((s1[i] || s2[i]) && (i < n))
 	{
-		*dest = *src;
+		if (s1[i] < s2[i])
+			return (-1);
+		if (s1[i] > s2[i])
+			return (1);
 		i++;
-		dest++;
-		src++;
 	}
-	while (i < n)
-	{
-		*dest = '\0';
-		i++;
-		dest++;
-	}
-	*dest = '\0';
-	return (output);
+	return (0);
 }

@@ -1,37 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dpoulter <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/02/19 16:06:34 by dpoulter          #+#    #+#             */
-/*   Updated: 2018/02/20 11:13:10 by dpoulter         ###   ########.fr       */
+/*   Created: 2018/02/17 09:28:52 by dpoulter          #+#    #+#             */
+/*   Updated: 2018/02/17 10:45:47 by dpoulter         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include <unistd.h>
 
-char	*ft_strncpy(char *dest, char *src, unsigned int n)
+void	ft_putchar(char c)
 {
-	char			*output;
-	unsigned int	i;
-
-	i = 0;
-	output = dest;
-	while (*src != '\0' && i < n)
-	{
-		*dest = *src;
-		i++;
-		dest++;
-		src++;
-	}
-	while (i < n)
-	{
-		*dest = '\0';
-		i++;
-		dest++;
-	}
-	*dest = '\0';
-	return (output);
+	write(1, &c, 1);
 }

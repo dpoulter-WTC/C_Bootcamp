@@ -1,37 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_print_program_name.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dpoulter <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/02/19 16:06:34 by dpoulter          #+#    #+#             */
-/*   Updated: 2018/02/20 11:13:10 by dpoulter         ###   ########.fr       */
+/*   Created: 2018/02/20 18:29:02 by dpoulter          #+#    #+#             */
+/*   Updated: 2018/02/20 18:29:03 by dpoulter         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+void	ft_putchar(char c);
 
-char	*ft_strncpy(char *dest, char *src, unsigned int n)
+int		main(int argc, char **argv)
 {
-	char			*output;
-	unsigned int	i;
+	int i;
 
 	i = 0;
-	output = dest;
-	while (*src != '\0' && i < n)
+	while (argv[0][i])
 	{
-		*dest = *src;
+		ft_putchar(argv[0][i]);
 		i++;
-		dest++;
-		src++;
 	}
-	while (i < n)
-	{
-		*dest = '\0';
-		i++;
-		dest++;
-	}
-	*dest = '\0';
-	return (output);
+	return (0);
 }
