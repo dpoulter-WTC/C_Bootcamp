@@ -6,11 +6,9 @@
 /*   By: dpoulter <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/16 09:52:56 by dpoulter          #+#    #+#             */
-/*   Updated: 2018/02/16 11:12:50 by dpoulter         ###   ########.fr       */
+/*   Updated: 2018/02/21 10:14:21 by dpoulter         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-void	ft_putchar(char c);
 
 int		ft_strlen(char *str)
 {

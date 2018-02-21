@@ -1,24 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_program_name.c                            :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dpoulter <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/02/20 18:29:02 by dpoulter          #+#    #+#             */
-/*   Updated: 2018/02/21 09:35:39 by dpoulter         ###   ########.fr       */
+/*   Created: 2018/02/21 11:26:32 by dpoulter          #+#    #+#             */
+/*   Updated: 2018/02/21 13:32:24 by dpoulter         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_putchar(char c);
+#include <stdlib.h>
 
-int		main(int argc, char **argv)
+char	*ft_strdup(char *src)
 {
-	argc = 0;
-	while (argv[0][argc])
-	{
-		ft_putchar(argv[0][argc]);
-		argc++;
-	}
-	return (0);
+	char	*string;
+	int		i;
+	int		strlength;
+
+	i = 0;
+	strlength = 0;
+	while(src[strlength])
+		strlength++;
+	string = (char *) malloc(sizeof(src) * strlength);
+	while((string[i] = src[i]) != '\0' && i++ > -1)
+		;
+	string[i+1] = '\0';
+	return (string);
 }

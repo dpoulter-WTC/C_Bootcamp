@@ -6,35 +6,33 @@
 /*   By: dpoulter <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/20 18:27:19 by dpoulter          #+#    #+#             */
-/*   Updated: 2018/02/20 19:42:31 by dpoulter         ###   ########.fr       */
+/*   Updated: 2018/02/21 10:41:05 by dpoulter         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void	ft_putchar(char c);
 
-int		ft_strcmp(char *s1, char *s2)
+void	ft_sort_ascii(char **val, int nb)
 {
-	int	i;
+	int		i;
+	int		j;
+	char	*tmp;
 
-	i = 0;
-	while (s1[i] || s2[i])
+	i = 1;
+	while (i < (nb - 1))
 	{
-		if (s1[i] < s2[i])
-			return (-1);
-		if (s1[i] > s2[i])
-			return (1);
+		j = 0;
+		while (val[i][j] == val[i + 1][j])
+			j++;
+		if (val[i][j] > val[i + 1][j])
+		{
+			tmp = val[i];
+			val[i] = val[i + 1];
+			val[i + 1] = tmp;
+			i = 0;
+		}
 		i++;
 	}
-	return (0);
-}
-
-void	ft_swap(int *a, int *b)
-{
-	int c;
-
-	c = *a;
-	*a = *b;
-	*b = c;
 }
 
 int		main(int argc, char **argv)
@@ -43,19 +41,8 @@ int		main(int argc, char **argv)
 	int		j;
 	int		arr[argc];
 
-	j = 0;
-	while (j++ < argc)
-		arr[j] = j;
-	j = 0;
-	while (j < argc)
-	{
-		if (ft_strcmp(argv[j], argv[j+1]))
-		{
-			ft_swap(&arr[j], &arr[j+1]);
-		}	
-		j++;
-	}
-	j = 0;
+	ft_sort_ascii(argv, argc);
+	j = 1;
 	while (j < argc)
 	{
 		i = 0;
@@ -65,7 +52,7 @@ int		main(int argc, char **argv)
 			i++;
 		}
 		ft_putchar('\n');
+		j++;
 	}
-
 	return (0);
 }
