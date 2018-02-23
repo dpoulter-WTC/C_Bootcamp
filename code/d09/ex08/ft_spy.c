@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_spy.c                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dpoulter <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/02/23 11:05:19 by dpoulter          #+#    #+#             */
+/*   Updated: 2018/02/23 11:08:38 by dpoulter         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <unistd.h>
 
 void	write_alert(void)
@@ -13,9 +25,9 @@ int		ft_strcmp(char *s1, char *s2)
 	while (s1[i] || s2[i])
 	{
 		if (s1[i] < s2[i])
-		return (-1);
+			return (-1);
 		if (s1[i] > s2[i])
-		return (1);
+			return (1);
 		i++;
 	}
 	return (0);
@@ -31,17 +43,15 @@ void	find_alert(char *str)
 		write_alert();
 }
 
-void test(char *str)
+void	ft_tolower(char *str)
 {
 	int	i;
-	
+
 	i = 0;
 	while (str[i])
 	{
 		if (str[i] >= 65 && str[i] <= 90)
-		{
 			str[i] = str[i] + 32;
-		}
 		i++;
 	}
 }
@@ -52,7 +62,7 @@ int		main(int argc, char **argv)
 	int		i;
 	int		j;
 	int		k;
-	
+
 	i = 1;
 	while (i < argc)
 	{
@@ -68,7 +78,7 @@ int		main(int argc, char **argv)
 			j++;
 		}
 		temp[j] = '\0';
-		test(temp);
+		ft_tolower(temp);
 		find_alert(temp);
 		i++;
 	}
