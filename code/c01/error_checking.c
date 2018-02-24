@@ -1,22 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_perso.h                                         :+:      :+:    :+:   */
+/*   error_checking.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dpoulter <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/02/23 11:38:08 by dpoulter          #+#    #+#             */
-/*   Updated: 2018/02/23 11:38:09 by dpoulter         ###   ########.fr       */
+/*   Created: 2018/02/24 17:20:58 by dpoulter          #+#    #+#             */
+/*   Updated: 2018/02/24 17:58:16 by dpoulter         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#define SAVE_AUSTIN_POWERS "To change"
+int		check_length
 
-typedef struct s_perso
+int		check_input(int argc, char **argv)
 {
-	char *name;
-	float life;
-	int age;
-	char *profession;
-}					t_perso;
+	int i;
+	int j;
+
+	i = 1;
+	j = 0;
+	if (argc != 10)
+	{
+		return (0);
+	}
+	while (argv[i])
+	{
+		if (
+
+	}
+
+
+
+	return (1);
+}
