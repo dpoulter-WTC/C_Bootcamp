@@ -2,7 +2,7 @@ int		main(int argc, char **argv)
 {
 	if (check_input(argc, argv) == 1)
 	{
-		ft_set
+		print(argc, argv);
 	else
 	{
 		ft_putstr("Error");
