@@ -6,9 +6,12 @@
 /*   By: dpoulter <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/24 17:20:58 by dpoulter          #+#    #+#             */
-/*   Updated: 2018/02/24 17:58:16 by dpoulter         ###   ########.fr       */
+/*   Updated: 2018/02/25 11:08:12 by dpoulter         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "sudoku.h"
+
 int	check_line(char **tab, char nb, int x)
 {
 	int i;

@@ -1,26 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   sudoku.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dpoulter <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/02/25 11:06:53 by dpoulter          #+#    #+#             */
-/*   Updated: 2018/02/25 11:14:55 by dpoulter         ###   ########.fr       */
+/*   Created: 2018/02/25 11:02:51 by dpoulter          #+#    #+#             */
+/*   Updated: 2018/02/25 11:14:34 by dpoulter         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "sudoku.h"
+#ifndef __SUDOKU_H
+# define __SUDOKU_H
+# include <unistd.h>
 
-int		main(int argc, char **argv)
-{
-	if (check_input(argc, argv) == 1)
-	{
-		print(argc, argv);
-	}
-	else
-	{
-		ft_putchar('\n');
-	}
-	return (0);
-}
+void		ft_putchar (char c);
+int			check_input(int argc, char **argv);
+void		print(int argc, char **argv);
+#endif
